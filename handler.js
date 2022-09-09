@@ -10,23 +10,9 @@ const dynamoDbClient = new AWS.DynamoDB.DocumentClient();
 app.use(express.json());
 
 app.get("/users/:userId", async function (req, res) {
-  const params = {
-    TableName: USERS_TABLE,
-    Key: {
-      userId: req.params.userId,
-    },
-  };
-
+  userId = req.params.userId;
   try {
-    const { Item } = await dynamoDbClient.get(params).promise();
-    if (Item) {
-      const { userId, name } = Item;
-      res.json({ userId, name });
-    } else {
-      res
-        .status(404)
-        .json({ error: 'Could not find user with provided "userId"' });
-    }
+    res.status(200).json({ success: 'Hello World' })
   } catch (error) {
     console.log(error);
     res.status(500).json({ error: "Could not retreive user" });
