@@ -136,4 +136,4 @@ serverless offline start
 
 To learn more about the capabilities of `serverless-offline` and `serverless-dynamodb-local`, please refer to their corresponding GitHub repositories:
 - https://github.com/dherault/serverless-offline
-- https://github.com/99x/serverless-dynamodb-local
+- https://github.com/99x/serverless-dynamodb-locals
