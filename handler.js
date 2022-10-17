@@ -1,9 +1,7 @@
 const AWS = require("aws-sdk");
 const express = require("express");
 const serverless = require("serverless-http");
-
 const app = express();
-
 const USERS_TABLE = process.env.USERS_TABLE;
 const dynamoDbClient = new AWS.DynamoDB.DocumentClient();
 
